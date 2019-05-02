@@ -1,0 +1,137 @@
+html
+body {
+    background-color: #000;
+}
+
+body {
+    display: column;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.img1:hover {
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.img2:hover {
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.img3:hover {
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.div1:hover {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    transition: .5s
+}
+
+.div2:hover {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    transition: .5s
+}
+
+.div3:hover {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    transition: .5s
+}
+
+.div1 {
+    /* width: 33.33%; */
+    width: 465px ;
+    height: 697.5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* z-index: 1; */
+    position: relative;
+    color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+.div2 {
+    /* width: 33.33%; */
+    width: 465px ;
+    height: 697.5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* z-index: 1; */
+    position: relative;
+    color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+.div3 {
+    /* width: 33.33%; */
+    width: 465px ;
+    height: 697.5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* z-index: 1; */
+    position: relative;
+    color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+.divh {
+    color: antiquewhite;
+    align-content: center;
+    /* z-index: 2; */
+}
+
+.centered1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* color: aliceblue; */
+    /* opacity: 0 ; */
+}
+
+.centered2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* color: aliceblue;
+    opacity: 0 ; */
+}
+
+.centered3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* color: aliceblue;
+    opacity: 0 ; */
+}
+
+/* .centered1:hover{
+    opacity: 1;
+    transition: .7s ease-in;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: orange;
+    /* opacity: 0 ; */
+/* }
+.centered2:hover{
+    opacity: 1;
+    transition: .7s ease;
+}
+.centered3:hover{
+    opacity: 1;
+    transition: .7s ease;
+} */
