@@ -1,39 +1,86 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="_css/myStyle.css">
   <meta charset="utf-8">
-  <title>Matthew Swain</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <!-- Bellow is a line that eliminates mobil devices trying to make a mobile version 
+    of the site by making the sacle stay at 1 no matter the local viewport. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Matthew Swain </title>
+  <!--  This <script> line is allowing the JQeuery to function 
+    properly, ly linking to the google JQuerey server -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- The bellow links are linking the CSS however they link a diffrent CSS dock based on 
+    the media size making the website mobil frendly. -->
+  <link rel="stylesheet" href="../_css/finalCSSDesk.css">
+  <link rel="stylesheet" media="screen and (max-device-width: 899px)" href="../_css/finalCSS_M.css">
+  <!-- The bellow <script> is the JS and JQuerey that allows the animations and movment of 
+            my site to work, I tought myself all of this using W3Schools.com, muneruous 
+            stackoverflow posts, and a few hours of trial and error. -->
+  <script>
+    $(document).ready(function () {
+      /* Makes sure the entire page is loaded before running any JS */
+      $(".div1, .img1, .centered1").click(function () {
+        /* When any of the specified classes are clicked the function bellow runs */
+        $(".div2, .img2, .centered2, .div3, .img3, .centered3, .img1") /* These are the classes effected. */
+          .fadeTo("slow", 0); /* This is the actual effect that is happening to them. */
+        $(".centered1") /* This is a second action that the function takes simultaniously as the above, effecting only the .centered1 */
+          .animate({
+            fontSize: '120px'
+          }) /* Function animating the fint size to grow. */ .fadeOut(1000, function () {
+            /* this makes the text fade away and then there is a callbak function that runs once the previous line is compelted */
+            window.location = "https://www.google.com/"
+          }); /* It opens the link to google as a filler */
+      });
+    });
+    /* This is the same thing as above the only thing changed is the classes effected. */
+    $(document).ready(function () {
+      $(".div2, .img2, .centered2").click(function () {
+        $(".div3, .img3, .centered3, .div1, .img1, .centered1, .img2")
+          .fadeTo("slow", 0);
+        $(".centered2")
+          .animate({
+            fontSize: '120px'
+          }).fadeOut(1000, function () {
+            window.location = "https://www.google.com/"
+          });
+
+      });
+    });
+    /* This is the same thing as above the only thing changed is the classes effected. */
+    $(document).ready(function () {
+      $(".div3, .img3, .centered3").click(function () {
+        $(".div1, .img1, .centered1, .div2, .img2, .centered2, .img3")
+          .fadeTo("slow", 0);
+        $(".centered3")
+          .animate({
+            fontSize: '120px'
+          }).fadeOut(1000, function () {
+            window.location = "https://www.google.com/"
+          });
+      });
+    });
+  </script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="banner">
-      <h1>text</h1>
-    </div>
-    <div class="nav">
-    </div>
-    <div class="content">
-      <div class="testDiv">#</div>
-      <h1>#</h1>
-      <p>#</p>
-      <a href="#">
-        <h2>#</h2>
-      </a>
-    </div>
+  <!-- Bellow is a div covering the left third of the screen it ontians text and image of myself. -->
+  <div class="div1">
+    <!-- Each class is splitting up these elements so that they each ahve theree own CSS and JS equated to 
+            them, and while it seems repetitive there are minor diffrences in each item due to their placement on the page. -->
+    <img class="img1" src="../_images/MatthewSwainsHeadshotsColoredRAW-180.jpeg" width="465" height="697.5">
+    <div class="centered1">Resume's</div>
   </div>
-  <script src="_js/test.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <!-- this div coveres the second third fo the screen -->
+  <div class="div2">
+    <img class="img2" src="../_images/BlueJeans.jpg" width="465" height="697.5">
+    <div class="centered2">About</div>
+  </div>
+  <!-- and this div the final third -->
+  <div class="div3">
+    <img class="img3" src="../_images/MatthewSwainsHeadshotsColoredRAW-197.jpg" width="465" height="697.5">
+    <div class="centered3">More</div>
+  </div>
 </body>
 
 </html>
